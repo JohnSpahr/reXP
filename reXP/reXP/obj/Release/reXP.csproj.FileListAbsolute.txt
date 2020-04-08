@@ -1,0 +1,9 @@
+E:\reXP\reXP\bin\Release\reXP.exe.config
+E:\reXP\reXP\bin\Release\reXP.exe
+E:\reXP\reXP\bin\Release\reXP.pdb
+E:\reXP\reXP\obj\Release\reXP.csprojAssemblyReference.cache
+E:\reXP\reXP\obj\Release\reXP.reXP.resources
+E:\reXP\reXP\obj\Release\reXP.Properties.Resources.resources
+E:\reXP\reXP\obj\Release\reXP.csproj.GenerateResource.cache
+E:\reXP\reXP\obj\Release\reXP.exe
+E:\reXP\reXP\obj\Release\reXP.pdb
