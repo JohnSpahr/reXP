@@ -7,11 +7,11 @@ A tool that lets you copy pre-installed Windows XP programs and games to a porta
 Version 4.0 of the .NET Framework is **required** for reXP to work properly. You can get it from [Microsoft's website](https://www.microsoft.com/en-us/download/confirmation.aspx?id=17718).
 
 ## Download
-[Windows executable](https://github.com/JohnSpahr/reXP/releases/download/v1.1/reXP_v1.1.exe)
+[Windows executable](https://github.com/JohnSpahr/reXP/releases/download/v1.2/reXP_v1.2.exe)
 
-[Source code (zip)](https://github.com/JohnSpahr/reXP/archive/v1.1.zip)
+[Source code (zip)](https://github.com/JohnSpahr/reXP/archive/v1.2.zip)
 
-[Source code (tar.gz)](https://github.com/JohnSpahr/reXP/archive/v1.1.tar.gz)
+[Source code (tar.gz)](https://github.com/JohnSpahr/reXP/archive/v1.2.tar.gz)
 
 ## About
 This program was written by John Spahr.
