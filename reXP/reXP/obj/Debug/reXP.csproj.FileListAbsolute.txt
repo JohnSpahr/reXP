@@ -1,8 +1,0 @@
-E:\reXP\reXP\bin\Debug\reXP.exe.config
-E:\reXP\reXP\bin\Debug\reXP.exe
-E:\reXP\reXP\bin\Debug\reXP.pdb
-E:\reXP\reXP\obj\Debug\reXP.reXP.resources
-E:\reXP\reXP\obj\Debug\reXP.Properties.Resources.resources
-E:\reXP\reXP\obj\Debug\reXP.csproj.GenerateResource.cache
-E:\reXP\reXP\obj\Debug\reXP.exe
-E:\reXP\reXP\obj\Debug\reXP.pdb
