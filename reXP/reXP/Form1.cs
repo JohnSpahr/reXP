@@ -16,19 +16,44 @@ namespace reXP
         {
             InitializeComponent();
 
+            start();
+        }
+
+        private void start()
+        {
             //check if version is windows xp
             int version = Environment.OSVersion.Version.Minor;
             if (version.ToString() == "1")
             {
+                int totalDrives = 0;
+
                 foreach (var drive in DriveInfo.GetDrives())
                 {
                     if (drive.DriveType == DriveType.Removable)
                     {
                         //add each removable drive to listbox
                         driveList.Items.Add(drive.Name + " - " + drive.VolumeLabel);
+                        totalDrives++;
                     }
                 }
-                driveList.SelectedIndex = 0;
+
+                if (totalDrives != 0)
+                {
+                    driveList.SelectedIndex = 0;
+                }
+                else
+                {
+                    if (MessageBox.Show("No removable drives found. Would you like to check for drives again?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                    {
+                        //check for drives again
+                        start();
+                    }
+                    else
+                    {
+                        //exit
+                        Environment.Exit(0);
+                    }
+                }
             }
             else
             {
@@ -249,7 +274,7 @@ namespace reXP
         private void aboutBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //show about screen
-            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.1\nCreated by John Spahr\nhttps://tectrasystems.org\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.2\nCreated by John Spahr\nhttps://tectrasystems.org\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
