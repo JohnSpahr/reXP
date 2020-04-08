@@ -32,7 +32,6 @@
             this.startBtn = new System.Windows.Forms.Button();
             this.freeCellBox = new System.Windows.Forms.CheckBox();
             this.heartsBox = new System.Windows.Forms.CheckBox();
-            this.internetGamesBox = new System.Windows.Forms.CheckBox();
             this.minesweeperBox = new System.Windows.Forms.CheckBox();
             this.pinballBox = new System.Windows.Forms.CheckBox();
             this.solitaireBox = new System.Windows.Forms.CheckBox();
@@ -45,15 +44,13 @@
             this.statusLbl = new System.Windows.Forms.Label();
             this.aboutBtn = new System.Windows.Forms.LinkLabel();
             this.movieMakerBox = new System.Windows.Forms.CheckBox();
-            this.outlookBox = new System.Windows.Forms.CheckBox();
             this.selectAllBtn = new System.Windows.Forms.Button();
             this.selectNoneBtn = new System.Windows.Forms.Button();
-            this.messengerBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // startBtn
             // 
-            this.startBtn.Location = new System.Drawing.Point(16, 463);
+            this.startBtn.Location = new System.Drawing.Point(15, 393);
             this.startBtn.Margin = new System.Windows.Forms.Padding(4);
             this.startBtn.Name = "startBtn";
             this.startBtn.Size = new System.Drawing.Size(85, 28);
@@ -84,21 +81,10 @@
             this.heartsBox.Text = "Hearts";
             this.heartsBox.UseVisualStyleBackColor = true;
             // 
-            // internetGamesBox
-            // 
-            this.internetGamesBox.AutoSize = true;
-            this.internetGamesBox.Location = new System.Drawing.Point(16, 199);
-            this.internetGamesBox.Margin = new System.Windows.Forms.Padding(4);
-            this.internetGamesBox.Name = "internetGamesBox";
-            this.internetGamesBox.Size = new System.Drawing.Size(312, 21);
-            this.internetGamesBox.TabIndex = 3;
-            this.internetGamesBox.Text = "Internet Games (Online Services Shut Down)";
-            this.internetGamesBox.UseVisualStyleBackColor = true;
-            // 
             // minesweeperBox
             // 
             this.minesweeperBox.AutoSize = true;
-            this.minesweeperBox.Location = new System.Drawing.Point(16, 228);
+            this.minesweeperBox.Location = new System.Drawing.Point(15, 200);
             this.minesweeperBox.Margin = new System.Windows.Forms.Padding(4);
             this.minesweeperBox.Name = "minesweeperBox";
             this.minesweeperBox.Size = new System.Drawing.Size(113, 21);
@@ -109,7 +95,7 @@
             // pinballBox
             // 
             this.pinballBox.AutoSize = true;
-            this.pinballBox.Location = new System.Drawing.Point(16, 256);
+            this.pinballBox.Location = new System.Drawing.Point(15, 228);
             this.pinballBox.Margin = new System.Windows.Forms.Padding(4);
             this.pinballBox.Name = "pinballBox";
             this.pinballBox.Size = new System.Drawing.Size(72, 21);
@@ -120,7 +106,7 @@
             // solitaireBox
             // 
             this.solitaireBox.AutoSize = true;
-            this.solitaireBox.Location = new System.Drawing.Point(16, 284);
+            this.solitaireBox.Location = new System.Drawing.Point(15, 256);
             this.solitaireBox.Margin = new System.Windows.Forms.Padding(4);
             this.solitaireBox.Name = "solitaireBox";
             this.solitaireBox.Size = new System.Drawing.Size(81, 21);
@@ -131,7 +117,7 @@
             // spiderSolitaireBox
             // 
             this.spiderSolitaireBox.AutoSize = true;
-            this.spiderSolitaireBox.Location = new System.Drawing.Point(16, 313);
+            this.spiderSolitaireBox.Location = new System.Drawing.Point(15, 285);
             this.spiderSolitaireBox.Margin = new System.Windows.Forms.Padding(4);
             this.spiderSolitaireBox.Name = "spiderSolitaireBox";
             this.spiderSolitaireBox.Size = new System.Drawing.Size(126, 21);
@@ -142,7 +128,7 @@
             // xpToursBox
             // 
             this.xpToursBox.AutoSize = true;
-            this.xpToursBox.Location = new System.Drawing.Point(16, 341);
+            this.xpToursBox.Location = new System.Drawing.Point(15, 313);
             this.xpToursBox.Margin = new System.Windows.Forms.Padding(4);
             this.xpToursBox.Name = "xpToursBox";
             this.xpToursBox.Size = new System.Drawing.Size(149, 21);
@@ -196,7 +182,7 @@
             // statusLbl
             // 
             this.statusLbl.AutoSize = true;
-            this.statusLbl.Location = new System.Drawing.Point(12, 512);
+            this.statusLbl.Location = new System.Drawing.Point(11, 442);
             this.statusLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLbl.Name = "statusLbl";
             this.statusLbl.Size = new System.Drawing.Size(120, 17);
@@ -207,7 +193,7 @@
             // 
             this.aboutBtn.AutoSize = true;
             this.aboutBtn.LinkColor = System.Drawing.Color.Blue;
-            this.aboutBtn.Location = new System.Drawing.Point(323, 512);
+            this.aboutBtn.Location = new System.Drawing.Point(322, 442);
             this.aboutBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aboutBtn.Name = "aboutBtn";
             this.aboutBtn.Size = new System.Drawing.Size(45, 17);
@@ -220,7 +206,7 @@
             // movieMakerBox
             // 
             this.movieMakerBox.AutoSize = true;
-            this.movieMakerBox.Location = new System.Drawing.Point(16, 369);
+            this.movieMakerBox.Location = new System.Drawing.Point(15, 341);
             this.movieMakerBox.Margin = new System.Windows.Forms.Padding(4);
             this.movieMakerBox.Name = "movieMakerBox";
             this.movieMakerBox.Size = new System.Drawing.Size(170, 21);
@@ -228,20 +214,9 @@
             this.movieMakerBox.Text = "Windows Movie Maker";
             this.movieMakerBox.UseVisualStyleBackColor = true;
             // 
-            // outlookBox
-            // 
-            this.outlookBox.AutoSize = true;
-            this.outlookBox.Location = new System.Drawing.Point(16, 398);
-            this.outlookBox.Margin = new System.Windows.Forms.Padding(4);
-            this.outlookBox.Name = "outlookBox";
-            this.outlookBox.Size = new System.Drawing.Size(253, 21);
-            this.outlookBox.TabIndex = 20;
-            this.outlookBox.Text = "Outlook Express and Address Book";
-            this.outlookBox.UseVisualStyleBackColor = true;
-            // 
             // selectAllBtn
             // 
-            this.selectAllBtn.Location = new System.Drawing.Point(147, 463);
+            this.selectAllBtn.Location = new System.Drawing.Point(146, 393);
             this.selectAllBtn.Margin = new System.Windows.Forms.Padding(4);
             this.selectAllBtn.Name = "selectAllBtn";
             this.selectAllBtn.Size = new System.Drawing.Size(109, 28);
@@ -252,7 +227,7 @@
             // 
             // selectNoneBtn
             // 
-            this.selectNoneBtn.Location = new System.Drawing.Point(264, 463);
+            this.selectNoneBtn.Location = new System.Drawing.Point(263, 393);
             this.selectNoneBtn.Margin = new System.Windows.Forms.Padding(4);
             this.selectNoneBtn.Name = "selectNoneBtn";
             this.selectNoneBtn.Size = new System.Drawing.Size(109, 28);
@@ -261,26 +236,13 @@
             this.selectNoneBtn.UseVisualStyleBackColor = true;
             this.selectNoneBtn.Click += new System.EventHandler(this.selectNoneBtn_Click);
             // 
-            // messengerBox
-            // 
-            this.messengerBox.AutoSize = true;
-            this.messengerBox.Location = new System.Drawing.Point(16, 426);
-            this.messengerBox.Margin = new System.Windows.Forms.Padding(4);
-            this.messengerBox.Name = "messengerBox";
-            this.messengerBox.Size = new System.Drawing.Size(345, 21);
-            this.messengerBox.TabIndex = 24;
-            this.messengerBox.Text = "Windows Messenger (Online Services Shut Down)";
-            this.messengerBox.UseVisualStyleBackColor = true;
-            // 
             // reXP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 542);
-            this.Controls.Add(this.messengerBox);
+            this.ClientSize = new System.Drawing.Size(389, 477);
             this.Controls.Add(this.selectNoneBtn);
             this.Controls.Add(this.selectAllBtn);
-            this.Controls.Add(this.outlookBox);
             this.Controls.Add(this.movieMakerBox);
             this.Controls.Add(this.aboutBtn);
             this.Controls.Add(this.statusLbl);
@@ -293,7 +255,6 @@
             this.Controls.Add(this.solitaireBox);
             this.Controls.Add(this.pinballBox);
             this.Controls.Add(this.minesweeperBox);
-            this.Controls.Add(this.internetGamesBox);
             this.Controls.Add(this.heartsBox);
             this.Controls.Add(this.freeCellBox);
             this.Controls.Add(this.startBtn);
@@ -302,7 +263,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "reXP";
-            this.Text = "reXP v1.0";
+            this.Text = "reXP v1.1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,7 +274,6 @@
         private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.CheckBox freeCellBox;
         private System.Windows.Forms.CheckBox heartsBox;
-        private System.Windows.Forms.CheckBox internetGamesBox;
         private System.Windows.Forms.CheckBox minesweeperBox;
         private System.Windows.Forms.CheckBox pinballBox;
         private System.Windows.Forms.CheckBox solitaireBox;
@@ -326,10 +286,8 @@
         private System.Windows.Forms.Label statusLbl;
         private System.Windows.Forms.LinkLabel aboutBtn;
         private System.Windows.Forms.CheckBox movieMakerBox;
-        private System.Windows.Forms.CheckBox outlookBox;
         private System.Windows.Forms.Button selectAllBtn;
         private System.Windows.Forms.Button selectNoneBtn;
-        private System.Windows.Forms.CheckBox messengerBox;
     }
 }
 

@@ -104,21 +104,6 @@ namespace reXP
                 }
             }
 
-            if (internetGamesBox.Checked == true)
-            {
-                if (Directory.Exists(@"C:\Program Files\MSN Gaming Zone\Windows"))
-                {
-                    //copy games to directory
-                    dirCopy(@"C:\Program Files\MSN Gaming Zone\Windows", currentDrive + @"reXP Save\Internet Games\");
-
-                }
-                else
-                {
-                    //if process fails
-                    MessageBox.Show("Unable to copy Internet Games to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
             if (minesweeperBox.Checked == true)
             {
                 if (File.Exists(@"C:\WINDOWS\system32\winmine.exe"))
@@ -202,33 +187,19 @@ namespace reXP
                     //if process fails
                     MessageBox.Show("Unable to copy Movie Maker to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
 
-                if (outlookBox.Checked == true)
+            if (freeCellBox.Checked == true || heartsBox.Checked == true || solitaireBox.Checked == true)
+            {
+                if (File.Exists(@"C:\WINDOWS\system32\cards.dll"))
                 {
-                    if (Directory.Exists(@"C:\Program Files\Outlook Express"))
-                    {
-                        //copy outlook express and address book to directory
-                        dirCopy(@"C:\Program Files\Outlook Express", currentDrive + @"reXP Save\Outlook Express and Address Book\");
-                    }
-                    else
-                    {
-                        //if process fails
-                        MessageBox.Show("Unable to copy Outlook Express and Address Book to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    //copy cards.dll 
+                    File.Copy(@"C:\WINDOWS\system32\cards.dll", currentDrive + @"reXP Save\cards.dll", true);
                 }
-
-                if (messengerBox.Checked == true)
+                else
                 {
-                    if (Directory.Exists(@"C:\Program Files\Messenger"))
-                    {
-                        //copy messenger to directory
-                        dirCopy(@"C:\Program Files\Messenger", currentDrive + @"reXP Save\Windows Messenger\");
-                    }
-                    else
-                    {
-                        //if process fails
-                        MessageBox.Show("Unable to copy Windows Messenger to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    //if process fails
+                    MessageBox.Show("Unable to copy cards.dll to drive. This file is needed for some of the Windows XP card games.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -278,7 +249,7 @@ namespace reXP
         private void aboutBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //show about screen
-            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.0\nCreated by John Spahr\nhttps://tectrasystems.org\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.1\nCreated by John Spahr\nhttps://tectrasystems.org\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
