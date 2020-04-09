@@ -18,6 +18,4 @@ This program was written by John Spahr. You can connect with him online at the l
 
 [GitHub Profile](https://github.com/JohnSpahr)
 
-[Website](https://tectrasystems.org)
-
 [YouTube Channel](https://www.youtube.com/channel/UCWq1rPvYqWjZkG0mru14BJw)
