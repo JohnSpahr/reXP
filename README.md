@@ -16,7 +16,7 @@ Version 4.0 of the .NET Framework is **required** for reXP to work properly. You
 [Source code (tar.gz)](https://github.com/JohnSpahr/reXP/archive/v1.3.tar.gz)
 
 ## About
-This program was written by John Spahr. You can connect with him online at the links below:
+This program was written by John Spahr.
 
 [GitHub Profile](https://github.com/JohnSpahr)
 
