@@ -19,5 +19,3 @@ Version 4.0 of the .NET Framework is **required** for reXP to work properly. You
 This program was written by John Spahr.
 
 [GitHub Profile](https://github.com/JohnSpahr)
-
-[YouTube Channel](https://www.youtube.com/channel/UCWq1rPvYqWjZkG0mru14BJw)
