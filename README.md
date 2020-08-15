@@ -1,7 +1,7 @@
 # reXP
 ![reXP Banner](https://github.com/JohnSpahr/reXP/blob/master/reXP.png?raw=true)
 
-A tool that lets you copy pre-installed Windows XP programs and games to a portable storage device.
+A tool that lets you copy preinstalled Windows XP programs and games to a portable storage device.
 
 ![reXP Screenshot](https://github.com/JohnSpahr/reXP/blob/master/screenshot.jpg?raw=true)
 
