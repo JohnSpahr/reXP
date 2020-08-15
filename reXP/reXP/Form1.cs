@@ -20,8 +20,7 @@ namespace reXP
         private void start()
         {
             //check if version is windows xp
-            int version = Environment.OSVersion.Version.Minor;
-            if (version == 1)
+            if (Environment.OSVersion.Version.Minor == 1)
             {
                 int totalDrives = 0;
 
@@ -270,7 +269,7 @@ namespace reXP
         private void aboutBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //show about screen
-            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.3.2\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.3.3\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

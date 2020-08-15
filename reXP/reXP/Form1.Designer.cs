@@ -154,9 +154,9 @@
             this.label1.Location = new System.Drawing.Point(12, 63);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 18);
+            this.label1.Size = new System.Drawing.Size(300, 18);
             this.label1.TabIndex = 14;
-            this.label1.Text = "copy windows xp programs to portable media";
+            this.label1.Text = "copy xp programs to portable storage media";
             // 
             // label2
             // 
@@ -263,7 +263,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "reXP";
-            this.Text = "reXP v1.3.2";
+            this.Text = "reXP v1.3.3";
             this.ResumeLayout(false);
             this.PerformLayout();
 
