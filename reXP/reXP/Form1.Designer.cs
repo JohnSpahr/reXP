@@ -263,7 +263,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "reXP";
-            this.Text = "reXP v1.3.1";
+            this.Text = "reXP v1.3.2";
             this.ResumeLayout(false);
             this.PerformLayout();
 

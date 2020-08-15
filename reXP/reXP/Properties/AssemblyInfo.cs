@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("reXP")]
-[assembly: AssemblyDescription("Copy programs that come preinstalled with Windows XP to portable media!")]
+[assembly: AssemblyDescription("Copy programs that come preinstalled with Windows XP to portable storage devices!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("John Spahr")]
 [assembly: AssemblyProduct("reXP")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.3.1.0")]
-[assembly: AssemblyFileVersion("1.3.1.0")]
+[assembly: AssemblyVersion("1.3.2.0")]
+[assembly: AssemblyFileVersion("1.3.2.0")]

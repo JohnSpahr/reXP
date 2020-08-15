@@ -270,7 +270,7 @@ namespace reXP
         private void aboutBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //show about screen
-            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.3.1\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.3.2\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
