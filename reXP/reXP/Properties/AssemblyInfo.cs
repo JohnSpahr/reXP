@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("reXP")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Copy programs that come preinstalled with Windows XP to portable media!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tectra Systems")]
+[assembly: AssemblyCompany("John Spahr")]
 [assembly: AssemblyProduct("reXP")]
-[assembly: AssemblyCopyright("Copyright © Tectra Systems 2020")]
+[assembly: AssemblyCopyright("Copyright © John Spahr 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.3.1.0")]
+[assembly: AssemblyFileVersion("1.3.1.0")]

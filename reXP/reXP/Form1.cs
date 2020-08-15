@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
@@ -19,11 +14,14 @@ namespace reXP
             start();
         }
 
+
+        public string currentDrive;
+
         private void start()
         {
             //check if version is windows xp
             int version = Environment.OSVersion.Version.Minor;
-            if (version.ToString() == "1")
+            if (version == 1)
             {
                 int totalDrives = 0;
 
@@ -43,7 +41,7 @@ namespace reXP
                 }
                 else
                 {
-                    if (MessageBox.Show("No removable drives found. Would you like to check for drives again?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                    if (MessageBox.Show("No removable drives found. Would you like to check for drives again?", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                     {
                         //check for drives again
                         start();
@@ -94,7 +92,7 @@ namespace reXP
             statusLbl.Text = "Copying files... please wait."; //indicate that files are being copied
             statusLbl.Refresh();
             startBtn.Enabled = false; //disable start button
-            this.Cursor = Cursors.WaitCursor; //show wait cursor
+            Cursor = Cursors.WaitCursor; //show wait cursor
 
             if (!Directory.Exists(currentDrive + "reXP Save"))
             {
@@ -230,12 +228,10 @@ namespace reXP
 
             statusLbl.Text = "Operation complete."; //set status label to default text
             statusLbl.Refresh();
-            this.Cursor = Cursors.Default; //show normal cursor
+            Cursor = Cursors.Default; //show normal cursor
             startBtn.Enabled = true; //enable start button
             Process.Start(currentDrive + "reXP Save"); //open up folder
         }
-
-        public string currentDrive;
 
         private void driveList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -247,7 +243,7 @@ namespace reXP
 
         private void selectAllBtn_Click(object sender, EventArgs e)
         {
-            foreach (var control in this.Controls)
+            foreach (var control in Controls)
             {
                 //select all programs
                 CheckBox cb = control as CheckBox;
@@ -260,7 +256,7 @@ namespace reXP
 
         private void selectNoneBtn_Click(object sender, EventArgs e)
         {
-            foreach (var control in this.Controls)
+            foreach (var control in Controls)
             {
                 //deselect all programs
                 CheckBox cb = control as CheckBox;
@@ -274,7 +270,7 @@ namespace reXP
         private void aboutBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //show about screen
-            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.3\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.3.1\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
