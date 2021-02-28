@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace reXP
 {
@@ -88,11 +89,27 @@ namespace reXP
 
         private void startBtn_Click(object sender, EventArgs e)
         {
+            //start things up
             statusLbl.Text = "Copying files... please wait."; //indicate that files are being copied
             statusLbl.Refresh();
-            startBtn.Enabled = false; //disable start button
             Cursor = Cursors.WaitCursor; //show wait cursor
+            Text = "reXP (working)"; //update form title
+            ChangeEnabled(false); //disable form controls
 
+            //begin copying on separate thread
+            Task.Factory.StartNew(() => copyProcess());
+        }
+
+        private void ChangeEnabled(bool enabled)
+        {
+            foreach (Control control in Controls)
+            {
+                control.Enabled = enabled;
+            }
+        }
+
+        private void copyProcess()
+        {
             if (!Directory.Exists(currentDrive + "reXP Save"))
             {
                 Directory.CreateDirectory(currentDrive + "reXP Save");
@@ -108,7 +125,7 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy FreeCell to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   errorMsg("FreeCell");
                 }
             }
 
@@ -122,7 +139,7 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy Hearts to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   errorMsg("Hearts");
                 }
             }
 
@@ -136,7 +153,7 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy Minesweeper to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   errorMsg("Minesweeper");
                 }
             }
 
@@ -150,7 +167,7 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy Pinball to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   errorMsg("Pinball");
                 }
             }
 
@@ -164,7 +181,7 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy Solitaire to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    errorMsg("Solitaire");
                 }
             }
 
@@ -178,7 +195,7 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy Spider Solitaire to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   errorMsg("Spider Solitaire");
                 }
             }
 
@@ -193,7 +210,7 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy Windows XP Tours to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   errorMsg("Windows XP Tours");
                 }
             }
 
@@ -207,7 +224,7 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy Movie Maker to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   errorMsg("Movie Maker");
                 }
             }
 
@@ -221,15 +238,30 @@ namespace reXP
                 else
                 {
                     //if process fails
-                    MessageBox.Show("Unable to copy cards.dll to drive. This file is needed for some of the Windows XP card games.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   MessageBox.Show("Unable to copy cards.dll to drive. This file is needed for some of the Windows XP card games.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
-            statusLbl.Text = "Operation complete."; //set status label to default text
-            statusLbl.Refresh();
-            Cursor = Cursors.Default; //show normal cursor
-            startBtn.Enabled = true; //enable start button
+            //update some stuff on UI thread
+            statusLbl.Invoke((MethodInvoker)delegate
+            {
+                statusLbl.Text = "Operation complete."; //set status label to default text
+                statusLbl.Refresh();
+            });
+
+            Invoke((MethodInvoker)delegate
+            {
+                Cursor = Cursors.Default; //show normal cursor
+                ChangeEnabled(true); //enable all controls
+                Text = "reXP"; //change title to default
+            });
+
             Process.Start(currentDrive + "reXP Save"); //open up folder
+        }
+
+        private void errorMsg(string program)
+        {
+           MessageBox.Show("Unable to copy " + program + " to drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void driveList_SelectedIndexChanged(object sender, EventArgs e)
@@ -269,7 +301,7 @@ namespace reXP
         private void aboutBtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //show about screen
-            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nVersion 1.3.3\nhttps://github.com/JohnSpahr", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("reXP - The best way to re-eXPerience Windows XP programs!\nCreated by John Spahr\nVersion " + Application.ProductVersion + "\nhttps://github.com/JohnSpahr/reXP", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

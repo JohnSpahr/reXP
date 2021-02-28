@@ -38,7 +38,7 @@
             this.spiderSolitaireBox = new System.Windows.Forms.CheckBox();
             this.xpToursBox = new System.Windows.Forms.CheckBox();
             this.logoLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.infoLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.driveList = new System.Windows.Forms.ComboBox();
             this.statusLbl = new System.Windows.Forms.Label();
@@ -147,16 +147,16 @@
             this.logoLbl.TabIndex = 13;
             this.logoLbl.Text = "reXP";
             // 
-            // label1
+            // infoLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 63);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 18);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "copy xp programs to portable storage media";
+            this.infoLbl.AutoSize = true;
+            this.infoLbl.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLbl.Location = new System.Drawing.Point(12, 63);
+            this.infoLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.infoLbl.Name = "infoLbl";
+            this.infoLbl.Size = new System.Drawing.Size(310, 18);
+            this.infoLbl.TabIndex = 14;
+            this.infoLbl.Text = "copy XP programs to portable storage devices";
             // 
             // label2
             // 
@@ -248,7 +248,7 @@
             this.Controls.Add(this.statusLbl);
             this.Controls.Add(this.driveList);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.infoLbl);
             this.Controls.Add(this.logoLbl);
             this.Controls.Add(this.xpToursBox);
             this.Controls.Add(this.spiderSolitaireBox);
@@ -263,7 +263,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "reXP";
-            this.Text = "reXP v1.4.0";
+            this.Text = "reXP";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,7 +280,7 @@
         private System.Windows.Forms.CheckBox spiderSolitaireBox;
         private System.Windows.Forms.CheckBox xpToursBox;
         private System.Windows.Forms.Label logoLbl;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label infoLbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox driveList;
         private System.Windows.Forms.Label statusLbl;
