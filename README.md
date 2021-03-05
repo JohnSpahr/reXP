@@ -4,7 +4,7 @@
 A tool that lets you easily copy Windows XP programs and games that were bundled with the operating system to a portable storage device.
 
 ## Download
-[Windows Executable](https://github.com/JohnSpahr/reXP/releases/tag/1.5.0)
+[Windows Executable](https://github.com/JohnSpahr/reXP/releases/download/1.5.0/reXP_v1.5.0.exe)
 
 Make sure you have version 4.0 of the .NET framework installed on your XP computer! It is required for reXP to work.
 
